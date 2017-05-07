@@ -10,7 +10,7 @@ Fresh Mint is a clean theme for Nylas Mail 2.0 adapted from [this concept](https
 - sidebar
 - thread
 
-## TODO
+## TODO
 
 - control bar
 - new message
