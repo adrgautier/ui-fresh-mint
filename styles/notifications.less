@@ -1,0 +1,17 @@
+@import "variables";
+
+.notification {
+  color: @white !important;
+  background: @fresh-accent !important;
+  border-radius: @base-border-radius !important;
+
+  .action {
+    color: @white !important;
+    background: darken(@fresh-accent, 20%);
+    border-radius: 0 !important;
+    border-color: transparent !important;
+    &:hover{
+      box-shadow: none !important;
+    }
+  }
+}
