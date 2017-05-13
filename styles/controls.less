@@ -7,13 +7,52 @@
 /**
  * Buttons
  */
+.toolbar-activity{
+  flex: 0 !important;
+  padding-top: 6px;
+  margin-right: 10px !important;
+  .activity-toolbar-icon{
+    cursor: pointer;
+    background-color: @fresh-lightgrey !important;
+  }
+}
+.item-spacer{
+  flex: 0 !important;
+}
 .btn-toolbar, .token, .actions>.btn, .new-package>.btn, .appearance-mode-switch>.btn {
   box-shadow: none !important;
   background: @white !important;
-  border: 0;
-  border-radius: @base-border-radius !important;
+  height: 50px !important;
+  border: none;
+
   &.item-compose {
-    border: 1px solid @taiga-light;
+    position: relative;
+    flex: 1;
+    margin: 10px 20px !important;
+    height: 30px !important;
+    padding: 0 !important;
+    color: @white !important;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: @fresh-accent !important;
+    cursor: pointer;
+
+    &:before{
+      content: "New message";
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0 15px;
+      line-height: 30px;
+      width: ~"calc(100% - 30px)";
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    &>img{
+      display: none;
+    }
   }
 }
 
@@ -28,6 +67,7 @@ body.platform-win32 {
   .sheet-toolbar-container {
     .btn-toolbar {
       border: 0 !important;
+      cursor: pointer;
     }
   }
 }
@@ -79,10 +119,53 @@ body.platform-win32 {
   }
 }
 
-.sheet-toolbar .btn-toolbar {
-  height: 2em !important;
-  line-height: 1 !important;
-  margin-top: 6px !important;
+.sheet-toolbar {
+  min-height: 51px !important;
+  height: 51px !important;
+  max-height: 51px !important;
+  border-bottom: 1px solid @fresh-light !important;
+  .toolbar-RootSidebar {
+    height: 100%;
+    box-shadow: 1px 0 0 @fresh-light !important;
+  }
+  .toolbar-ThreadList {
+    height: 100%;
+    .thread-search-bar {
+      height: 100%;
+      margin: 0 !important;
+      padding-left: 20px;
+      .header-container{
+        height: 50px !important;
+        input{
+          height: 50px !important;
+          box-shadow: none !important;
+          border: none !important;
+        }
+        .search-accessory.search{
+          top: 35px !important;
+          left: 6px !important;
+        }
+        .search-accessory.clear{
+          top: 32px !important;
+        }
+      }
+      .content-container{
+        top: 40px !important;
+      }
+    }
+    .selection-bar{
+      height: 50px !important;
+      .absolute{
+        height: 50px !important;
+        left: 1px !important;
+        border: none !important;
+        //.btn-toolbar
+        .centered{
+          line-height: 50px !important;
+        }
+      }
+    }
+  }
 }
 
 /**
@@ -103,7 +186,7 @@ body.platform-win32 {
       color: @white !important;
     }
     .secondary {
-      color: @taiga-lighter !important;
+      color: @fresh-lightgrey !important;
     }
   }
   &.search-container {
@@ -111,8 +194,8 @@ body.platform-win32 {
       background: @white !important;
     }
     .item.selected {
-      background: @taiga-light !important;
-      color: @white !important;
+      background: @fresh-lighter !important;
+      color: @fresh-dark !important;
     }
   }
 }

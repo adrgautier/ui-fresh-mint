@@ -1,6 +1,7 @@
 @import "variables";
 
 .list-tabular-item{
+  border-bottom: 1px solid @fresh-light !important;
   &.keyboard-cursor{
     border-left-color: @fresh-accent !important;
   }
@@ -21,10 +22,10 @@
         }
       }
       &.next-is-selected{
-        border-bottom-color: lighten(@fresh-accent, 20%);
+        border-bottom-color: lighten(@fresh-accent, 20%) !important;
       }
       &.selected{
-        border-bottom-color: lighten(@fresh-accent, 20%);
+        border-bottom-color: lighten(@fresh-accent, 20%) !important;
         .checkmark{
           .inner{
             background-color: @fresh-accent;
@@ -49,6 +50,15 @@
         }
         &:hover .list-column-HoverActions .inner {
           background-image: linear-gradient(90deg, fadeout(lighten(@fresh-accent, 30%), 100%) 0%, lighten(@fresh-accent, 30%) 75%);
+          .thread-injected-quick-actions{
+            mix-blend-mode: color-burn;
+          }
+          .action{
+            opacity: .4;
+            :hover{
+              opacity: 1;
+            }
+          }
         }
       }
       &:hover .list-column-HoverActions .inner {
